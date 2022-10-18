@@ -12,11 +12,7 @@ var format = '&format=json';
 
     smashTag = tagDiv.value
     
-    fetch('http://api.chartlyrics.com/apiv1.asmx/GetLyric?lyricId=234223&lyricCheckSum=035d26c1b6da516b1975be79b1df9784' + format + "&origin=*")
-    .then(function(response){return response.json();})
-    .then(function(response) {
-      console.log(response);
-    });
+    console.log(fetch('http://api.chartlyrics.com/apiv1.asmx/GetLyric?lyricId=234223&lyricCheckSum=035d26c1b6da516b1975be79b1df9784'))
 
     fetch(apiEndpoint + "?" + params + smashTag + format + "&origin=*")
         .then(function(response){return response.json();})
